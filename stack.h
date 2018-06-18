@@ -9,12 +9,12 @@
 
 template<class T>
 class Stack {
-public:
+private:
     T* internal_array;
     int capacity;
     int size;
 
-
+public:
     Stack(int in_size) {
         in_size = (in_size > 0) ? in_size : 1;
         internal_array = new T[in_size];
