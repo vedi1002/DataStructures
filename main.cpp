@@ -1,23 +1,31 @@
 #include <iostream>
 #include <string.h>
 #include "stack.h"
-
+#include "queue.h"
 
 
 int main() {
-    Stack<int> myStack(0);
-    myStack.push(5);
-    myStack.push(4);
-    myStack.push(3);
-    myStack.push(2);
-    myStack.push(1);
+    Queue<int> myQ(5);
+    for(int i=0; i < 30; i++) {
+        myQ.enqueue(i);
+        myQ.printArr();
+    }
+    for(int i=0; i < 30; i++) {
+        myQ.dequeue();
+        myQ.printArr();
 
-    std::cout << myStack.capacity << std::endl;
-    std::cout << myStack.pop() << std::endl;
-    std::cout << myStack.pop() << std::endl;
-    std::cout << myStack.pop() << std::endl;
-    std::cout << myStack.pop() << std::endl;
-    std::cout << myStack.pop() << std::endl;
+    }
+    for(int i=30; i >= 0; i--) {
+        myQ.enqueue(i);
+        myQ.printArr();
+
+    }
+    for(int i=0; i < 31; i++) {
+        std::cout << myQ.dequeue() << std::endl;
+
+    }
+
+
     return 0;
 
 }
