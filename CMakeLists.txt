@@ -3,4 +3,4 @@ project(DataStructures)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(DataStructures main.cpp stack.h)
+add_executable(DataStructures main.cpp stack.h queue.h)
